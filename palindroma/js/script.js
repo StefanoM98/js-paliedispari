@@ -4,6 +4,12 @@
 
 const userWordChoise = prompt("Inserisci una parola e posso vedere se questa parola è palindroma oppure no :)");
 
+if (isPali(userWordChoise)) {
+    console.log(true)
+} else {
+    console.log(false);
+}
+
 // ORA CREIAMO LA FUNZIONE
 /**
  * Description
@@ -16,9 +22,4 @@ function isPali(userWord) {
     return reverseWord === userWord;
 };
 
-if (isPali(userWordChoise)) {
-    console.log(true)
-} else {
-    console.log(false);
-}
 
