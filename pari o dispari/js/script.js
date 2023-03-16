@@ -7,11 +7,11 @@
 
 // FACCIAMO SCEGLIERE AL CLIENTE UN NUMERO DA 1 A 5 E SE VUOLE PARI O DISPARI
 const userNumber = parseInt(prompt("Dimmi un numero da 1 a 5"));
-console.log(userNumber);
+console.log(`Il numero che hai scelto è:${userNumber}`);
 const userOddEven = prompt("Scegli Pari o Dispari");
-console.log(userOddEven);
+console.log(`Hai scelto è:${userOddEven}`);
 const rndNumber = rndNumberPc (1, 5);
-console.log (rndNumber);
+console.log (`Il numero che è stato scelto per il pc è:${rndNumber}`);
 // ORA GENERIAMO UN NUMERO A CASO PER IL COMPUTER
 function rndNumberPc (min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -24,13 +24,18 @@ console.log(somma);
 
 function isOddOrEven(number) {
     if (somma % 2 === 0) {
-        return "Pari"
+        return "pari"
     } else {
-        return "Dispari"
+        return "dispari"
     }
 }
 
 let result = isOddOrEven(somma)
 console.log(result);
 
-
+// DICHIARIAMO IL VINCITORE
+if (result === userOddEven) {
+    console.log("Hai Vinto");
+} else {
+    console.log("Mi dispiace");
+}
